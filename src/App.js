@@ -10,7 +10,10 @@ export default function App() {
     };
     if (canMove) {
       window.addEventListener("mousemove", handleMouseMove);
-    } 
+    }
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove);
+    };
   });
 
   return (
