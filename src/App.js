@@ -14,7 +14,7 @@ export default function App() {
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
     };
-  });
+  }, [canMove]);
 
   return (
     <div onClick={() => setCanMove(!canMove)} className="container">
