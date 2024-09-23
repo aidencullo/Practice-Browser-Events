@@ -4,7 +4,11 @@ export default function App() {
   const [position, setPosition] = useState({ x: 50, y: 50 });
   const [canMove, setCanMove] = useState(true);
 
-  useEffect(() => {});
+  useEffect(() => {
+    const handleMouseMove = (e) => {
+      setPosition({ x: e.clientX, y: e.clientY });
+    };
+  });
 
   return (
     <div onClick={() => setCanMove(!canMove)} className="container">
