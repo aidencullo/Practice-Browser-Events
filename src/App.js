@@ -8,6 +8,9 @@ export default function App() {
     const handleMouseMove = (e) => {
       setPosition({ x: e.clientX, y: e.clientY });
     };
+    if (canMove) {
+      window.addEventListener("mousemove", handleMouseMove);
+    } 
   });
 
   return (
